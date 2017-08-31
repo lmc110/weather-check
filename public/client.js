@@ -3,9 +3,6 @@ $('#weather-form').submit(function(e) {
   var city = $('#city').val();
   var state = $('#state').val();
   console.log(city + ", " + state);
-  //$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=' + city + '&APPID=c5985e7ab6d2d55ca584f77808372be6&units=imperial', function(data) {
-  //  console.log(data);
-//});
 
 
   $.ajax('/request', {
@@ -17,7 +14,6 @@ $('#weather-form').submit(function(e) {
     success: function(response){
       console.log('request successful');
       getWeather(response.url_request);
-      //window.location = response.redirectUrl;
     },
     error: function(err) {
       alert('post failed');

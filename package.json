@@ -1,7 +1,7 @@
 {
-  "name": "leaflet-example",
+  "name": "weather-check",
   "version": "1.0.0",
-  "description": "Project using leaflet",
+  "description": "Weather web application",
   "engines": {
     "node": "6.10.0"
   },
