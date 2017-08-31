@@ -1,19 +1,15 @@
 $('#weather-form').submit(function(e) {
   e.preventDefault();
-  var city = $('#city').val();
-  var state = $('#state').val();
-  console.log(city + ", " + state);
-
+  var input = $('#area').val();
 
   $.ajax('/request', {
     data: {
-      city: city,
-      state: state
+      input: input
     },
     method: 'post',
     success: function(response){
       console.log('request successful');
-      getWeather(response.url_request);
+      //getWeather(response.url_request);
     },
     error: function(err) {
       alert('post failed');

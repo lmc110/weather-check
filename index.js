@@ -20,12 +20,17 @@ app.get('/', function(req, res, next) {
 
 // receive data from client
 app.post('/request', urlencodedParser, function(req, res) {
-  console.log("inside post");
-  var city = req.body.city;
-  city = city.toUpperCase();
-  var url_request = baseUrl + "weather?q=" + city + "&APPID=" + apiKey + "&units=imperial";
+  var input = req.body.input;
+  console.log(input);
+  if(isValidZipcode(input)) {
+    // get weather api request using zipcode
+  } else {
+    // check if city, state and get api request using city and state
+  }
+  
+  //var url_request = baseUrl + "weather?q=" + city + "&APPID=" + apiKey + "&units=imperial";
   if(!req.body) return res.sendStatus(400)
-  res.send({err: 0, url_request: url_request});
+  //res.send({err: 0, url_request: url_request});
 });
 
 
@@ -36,3 +41,8 @@ app.use(express.static(__dirname + '/public'));
 server.listen(app.get('port'), '0.0.0.0', function() {
   console.log('Node app is running on port', app.get('port'));
 });
+
+
+function isValidZipcode(zipcode) {
+  return /^\d{5}(-\d{4})?(?!-)$/.test(zipcode);
+}
