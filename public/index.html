@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="index.css" />
+    <script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div id="form-wrapper">
+        <form id="weather-form" action="/test.html">
+          City:<br />
+          <input type="text" name="city" id="city"/><br />
+          State:<br />
+          <input type="text" name="state" id="state"/>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div id="forecast-wrapper">
+
+      </div>
+    </div>
+  </body>
+
+  <script src="client.js"></script>
+  <div id="openweathermap-widget-11"></div>
+  <script src='https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
+  <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+  window.myWidgetParam.push({
+    id: 11,
+    cityid: '4705349',
+    appid: 'c5985e7ab6d2d55ca584f77808372be6',
+    units: 'imperial',
+    containerid: 'openweathermap-widget-11',
+  });
+  (function() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.charset = "utf-8";
+    script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(script, s);
+  })();
+  </script>
+
+</html>
