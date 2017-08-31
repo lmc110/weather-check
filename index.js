@@ -21,16 +21,18 @@ app.get('/', function(req, res, next) {
 // receive data from client
 app.post('/request', urlencodedParser, function(req, res) {
   var input = req.body.input;
-  console.log(input);
   if(isValidZipcode(input)) {
-    // get weather api request using zipcode
-  } else {
-    // check if city, state and get api request using city and state
+    var url_request = baseUrl + "weather?zip=" + input + "&APPID=" + apiKey + "&units=imperial";
+  } else if (input.indexOf(',' > -1)){
+    input = input.replace(/ /g, '');
+    var array = input.split(',');
+    var city = array[0];
+    var country = array[1];
+    var url_request = baseUrl + "weather?q=" + city + "," + country + "&APPID=" + apiKey + "&units=imperial";
   }
-  
-  //var url_request = baseUrl + "weather?q=" + city + "&APPID=" + apiKey + "&units=imperial";
+
   if(!req.body) return res.sendStatus(400)
-  //res.send({err: 0, url_request: url_request});
+  res.send({err: 0, url_request: url_request});
 });
 
 

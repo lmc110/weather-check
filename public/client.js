@@ -9,7 +9,7 @@ $('#weather-form').submit(function(e) {
     method: 'post',
     success: function(response){
       console.log('request successful');
-      //getWeather(response.url_request);
+      getWeather(response.url_request);
     },
     error: function(err) {
       alert('post failed');
