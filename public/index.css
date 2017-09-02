@@ -1,6 +1,8 @@
 body {
   padding: 0;
   margin: 0;
+  /*background-image: url("./images/clouds.jpg");*/
+  background-color: #ededed;
 }
 
 .pure-control-group label {
@@ -14,6 +16,8 @@ body {
   border-left: 0;
   border-right: 0;
   width: 20em;
+  font-size: 2em;
+  background-color: #eef6fb;
   box-shadow: none;
 }
 
@@ -34,6 +38,35 @@ p {
   margin-left: 11em;
 }
 
+input[type="text"] {
+  font-family: FontAwesome;
+}
+
 #form-wrapper {
-  margin-top: 10em;
+  margin-top: 15em;
+  margin-right: 5em;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera */
+  -moz-animation: fadein 3s; /* Firefox */
+  -ms-animation: fadein 3s; /* IE */
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
