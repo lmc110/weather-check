@@ -51,6 +51,22 @@ input[type="text"] {
   animation: fadein 3s;
 }
 
+.pure-button {
+  color: grey;
+  border: 1px solid darkgrey;
+  width: 30%;
+  background-color: snow;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#get-another {
+  text-align: center;
+}
+
 .pure-button-primary {
   color: grey;
   border: 1px solid darkgrey;
