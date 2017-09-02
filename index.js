@@ -4,7 +4,7 @@ var server = require('http').createServer(app);
 var bodyParser = require('body-parser');
 
 //http://api.openweathermap.org/data/2.5/weather?q=LAREDO&APPID=c5985e7ab6d2d55ca584f77808372be6&units=imperial
-var baseUrl = "http://api.openweathermap.org/data/2.5/";
+var baseUrl = "https://api.openweathermap.org/data/2.5/";
 var apiKey = "c5985e7ab6d2d55ca584f77808372be6";
 
 var urlencodedParser = bodyParser.urlencoded({extended: false});
