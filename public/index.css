@@ -61,6 +61,30 @@ input[type="text"] {
   white-space: nowrap;
 }
 
+#forecast {
+  font-family: Roboto;
+  background-color: azure;
+  border-radius: 10px;
+  width: 20em;
+  margin: auto;
+  height: 10em;
+  margin-top: 10em;
+  padding-left: 20px;
+  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera */
+  -moz-animation: fadein 3s; /* Firefox */
+  -ms-animation: fadein 3s; /* IE */
+  animation: fadein 3s;
+}
+
+#current-temp {
+  font-size: 56px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.fa-sun-o {
+  color: orange;
+}
+
 #clouds{
   position:absolute;
 	padding: 100px 0;
