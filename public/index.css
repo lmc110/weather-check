@@ -1,8 +1,17 @@
 body {
   padding: 0;
   margin: 0;
+  margin-left: 1em;
   /*background-image: url("./images/clouds.jpg");*/
   background-color: #00688B;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  margin-bottom: 0.5em;
 }
 
 .pure-control-group label {
@@ -15,8 +24,8 @@ body {
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  width: 20em;
-  font-size: 2em;
+  width: 80%;
+  font-size: 1.2em;
   background-color: #eef6fb;
   box-shadow: none;
 }
@@ -60,7 +69,6 @@ input[type="text"] {
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: center;
-  margin-top: 2em;
 }
 
 #get-another {
@@ -75,6 +83,11 @@ input[type="text"] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.area {
+  font-size: 1.2em;
+  width: 15em;
 }
 
 #forecast {
@@ -198,6 +211,11 @@ input[type="text"] {
   -moz-animation: moveclouds 35s linear infinite;
 }
 
+@media screen and (min-width: 480px) {
+  #weather-form > div.pure-controls {
+    margin-left: 0;
+  }
+}
 
 @keyframes moveclouds {
   0% { margin-left: 500%;}
